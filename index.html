@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-    <title>HRRY | Ultimate Unlocker</title>
+    <title>HRRY | Ultimate Unlocker Pro</title>
     <meta name="theme-color" content="#03050B">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     
@@ -35,204 +35,188 @@
         /* Loader */
         #app-loader { position: fixed; inset: 0; background: var(--bg-obsidian); z-index: 99999; display: flex; flex-direction: column; align-items: center; justify-content: center; transition: opacity 0.8s ease, visibility 0.8s; }
         #app-loader.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
-        .loader-logo { width: 70px; height: 70px; background: linear-gradient(135deg, #111, #000); border: 2px solid var(--cyan-neon); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 30px rgba(69, 223, 255, 0.4); animation: pulse-glow 1.5s infinite alternate; }
-        .loader-logo svg { width: 34px; height: 34px; fill: var(--cyan-neon); }
-        .loader-text { margin-top: 20px; font-size: 1.3rem; font-weight: 800; letter-spacing: 3px; color: var(--text-white); text-transform: uppercase; animation: fade-in-out 1.5s infinite alternate;}
+        .loader-logo { width: 80px; height: 80px; background: linear-gradient(135deg, #111, #000); border: 2px solid var(--cyan-neon); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 40px rgba(69, 223, 255, 0.5); animation: pulse-glow 1.5s infinite alternate; }
+        .loader-logo svg { width: 40px; height: 40px; fill: var(--cyan-neon); }
+        .loader-text { margin-top: 24px; font-size: 1.5rem; font-weight: 800; letter-spacing: 4px; color: var(--text-white); text-transform: uppercase; animation: fade-in-out 1.5s infinite alternate;}
 
-        @keyframes pulse-glow { 0% { transform: scale(0.95); box-shadow: 0 0 15px rgba(69, 223, 255, 0.2); } 100% { transform: scale(1.05); box-shadow: 0 0 40px rgba(69, 223, 255, 0.6); } }
-        @keyframes fade-in-out { 0% { opacity: 0.5; } 100% { opacity: 1; text-shadow: 0 0 8px rgba(255,255,255,0.4); } }
+        @keyframes pulse-glow { 0% { transform: scale(0.95); box-shadow: 0 0 20px rgba(69, 223, 255, 0.2); } 100% { transform: scale(1.05); box-shadow: 0 0 50px rgba(69, 223, 255, 0.8); } }
+        @keyframes fade-in-out { 0% { opacity: 0.5; } 100% { opacity: 1; text-shadow: 0 0 10px rgba(255,255,255,0.5); } }
 
         /* Ambient Background */
-        .ambient-bg { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1; pointer-events: none; background: radial-gradient(circle at 15% 0%, rgba(22, 140, 255, 0.1) 0%, transparent 50%), radial-gradient(circle at 85% 100%, rgba(163, 77, 255, 0.08) 0%, transparent 50%); animation: bg-shift 10s infinite alternate; }
+        .ambient-bg { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1; pointer-events: none; background: radial-gradient(circle at 15% 0%, rgba(22, 140, 255, 0.12) 0%, transparent 50%), radial-gradient(circle at 85% 100%, rgba(163, 77, 255, 0.1) 0%, transparent 50%); animation: bg-shift 10s infinite alternate; }
         @keyframes bg-shift { 0% { filter: hue-rotate(0deg); } 100% { filter: hue-rotate(30deg); } }
 
         /* Navigation */
-        nav { position: sticky; top: 0; z-index: 100; padding: 12px 20px; background: rgba(3, 5, 11, 0.7); backdrop-filter: blur(20px); border-bottom: 1px solid var(--glass-border); display: flex; justify-content: space-between; align-items: center; }
+        nav { position: sticky; top: 0; z-index: 100; padding: 14px 20px; background: rgba(3, 5, 11, 0.7); backdrop-filter: blur(20px); border-bottom: 1px solid var(--glass-border); display: flex; justify-content: space-between; align-items: center; }
         .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: white; }
-        .logo-box { width: 30px; height: 30px; background: #000; border: 1px solid var(--cyan-neon); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 10px rgba(69, 223, 255, 0.2); }
-        .logo-box svg { width: 16px; height: 16px; fill: var(--cyan-neon); }
-        .brand-text { font-weight: 800; font-size: 1.2rem; letter-spacing: 1px; background: linear-gradient(90deg, #fff, var(--text-silver)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;}
-        .nav-create-btn { background: rgba(22, 140, 255, 0.1); border: 1px solid var(--electric-blue); color: var(--cyan-neon); padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: 700; cursor: pointer; transition: all 0.3s ease; display: none; }
+        .logo-box { width: 34px; height: 34px; background: #000; border: 1px solid var(--cyan-neon); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 15px rgba(69, 223, 255, 0.3); }
+        .logo-box svg { width: 18px; height: 18px; fill: var(--cyan-neon); }
+        .brand-text { font-weight: 800; font-size: 1.3rem; letter-spacing: 1px; background: linear-gradient(90deg, #fff, var(--text-silver)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;}
+        .nav-create-btn { background: rgba(22, 140, 255, 0.1); border: 1px solid var(--electric-blue); color: var(--cyan-neon); padding: 8px 18px; border-radius: 20px; font-size: 0.9rem; font-weight: 700; cursor: pointer; transition: all 0.3s ease; display: none; }
         .nav-create-btn.show { display: block; }
-        .nav-create-btn:hover { background: var(--electric-blue); color: white; box-shadow: 0 0 15px rgba(22, 140, 255, 0.4); }
+        .nav-create-btn:hover { background: var(--electric-blue); color: white; box-shadow: 0 0 20px rgba(22, 140, 255, 0.5); }
 
-        .container { width: 100%; max-width: 600px; margin: 0 auto; padding: 20px 16px 100px; display: flex; flex-direction: column; gap: 18px; position: relative; z-index: 10; flex-grow: 1; }
+        .container { width: 100%; max-width: 650px; margin: 0 auto; padding: 24px 16px 100px; display: flex; flex-direction: column; gap: 20px; position: relative; z-index: 10; flex-grow: 1; }
 
         /* HOME VIEW */
         #home-view { display: none; }
-        .hero-section { text-align: center; padding: 20px 0; }
-        .hero-section h1 { font-size: 2.2rem; font-weight: 900; line-height: 1.2; margin-bottom: 10px; background: linear-gradient(to right, #fff, var(--cyan-neon)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .hero-section p { color: var(--text-silver); font-size: 1rem; line-height: 1.5; margin-bottom: 20px; }
+        .hero-section { text-align: center; padding: 30px 0; }
+        .hero-section h1 { font-size: 2.5rem; font-weight: 900; line-height: 1.1; margin-bottom: 12px; background: linear-gradient(to right, #fff, var(--cyan-neon)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero-section p { color: var(--text-silver); font-size: 1.1rem; line-height: 1.5; margin-bottom: 24px; }
         
-        .tg-card { background: linear-gradient(180deg, #101728 0%, #0A0F1C 100%); border: 1px solid rgba(255,255,255,0.1); border-radius: 20px; padding: 20px; display: flex; flex-direction: column; gap: 16px; box-shadow: 0 15px 30px rgba(0,0,0,0.5), inset 0 2px 15px rgba(255,255,255,0.02); cursor: pointer; transition: var(--transition); position: relative; overflow: hidden; text-decoration: none; color: white; }
+        .tg-card { background: linear-gradient(180deg, #101728 0%, #0A0F1C 100%); border: 1px solid rgba(255,255,255,0.1); border-radius: 24px; padding: 24px; display: flex; flex-direction: column; gap: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.6), inset 0 2px 20px rgba(255,255,255,0.02); cursor: pointer; transition: var(--transition); position: relative; overflow: hidden; text-decoration: none; color: white; }
         .tg-card::before { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(22, 140, 255, 0.1) 0%, transparent 60%); opacity: 0; transition: 0.5s; pointer-events: none; }
-        .tg-card:hover { transform: translateY(-4px); border-color: rgba(22,140,255,0.3); box-shadow: 0 20px 40px rgba(0,0,0,0.7), 0 0 25px rgba(22,140,255,0.2); }
+        .tg-card:hover { transform: translateY(-5px); border-color: rgba(22,140,255,0.3); box-shadow: 0 25px 50px rgba(0,0,0,0.8), 0 0 30px rgba(22,140,255,0.2); }
         .tg-card:hover::before { opacity: 1; }
-        .tg-header { display: flex; align-items: center; gap: 12px; justify-content: space-between; }
-        .tg-header-left { display: flex; align-items: center; gap: 12px; }
-        .tg-logo { width: 44px; height: 44px; border-radius: 50%; background: #fff; padding: 3px; box-shadow: 0 0 15px rgba(255,255,255,0.1); }
+        .tg-header { display: flex; align-items: center; gap: 16px; justify-content: space-between; }
+        .tg-header-left { display: flex; align-items: center; gap: 16px; }
+        .tg-logo { width: 50px; height: 50px; border-radius: 50%; background: #fff; padding: 4px; box-shadow: 0 0 20px rgba(255,255,255,0.1); }
         .tg-logo img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; }
-        .tg-title-box { display: flex; flex-direction: column; gap: 2px; }
-        .tg-title { font-size: 1rem; font-weight: 800; color: white; }
-        .live-badge { display: inline-flex; align-items: center; gap: 6px; font-size: 0.7rem; font-weight: 700; color: var(--success-green); letter-spacing: 1px; text-transform: uppercase; }
-        .live-dot { width: 6px; height: 6px; background: var(--success-green); border-radius: 50%; animation: pulse-red 1.5s infinite; }
-        .tg-icon-right svg { width: 18px; height: 18px; fill: var(--text-muted); }
-        .tg-body { text-align: center; padding: 5px 0; }
-        .tg-count { font-size: 3.5rem; font-weight: 900; line-height: 1; color: white; text-shadow: 0 0 25px rgba(255,255,255,0.2); margin-bottom: 2px; letter-spacing: -1px; }
-        .tg-label { font-size: 0.8rem; font-weight: 600; color: var(--text-muted); letter-spacing: 3px; text-transform: uppercase; }
-        .tg-footer { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 12px; font-size: 0.75rem; color: var(--text-muted); font-weight: 500;}
+        .tg-title-box { display: flex; flex-direction: column; gap: 4px; }
+        .tg-title { font-size: 1.1rem; font-weight: 800; color: white; }
+        .live-badge { display: inline-flex; align-items: center; gap: 6px; font-size: 0.75rem; font-weight: 700; color: var(--success-green); letter-spacing: 1px; text-transform: uppercase; }
+        .live-dot { width: 8px; height: 8px; background: var(--success-green); border-radius: 50%; animation: pulse-red 1.5s infinite; }
+        .tg-icon-right svg { width: 20px; height: 20px; fill: var(--text-muted); }
+        .tg-body { text-align: center; padding: 10px 0; }
+        .tg-count { font-size: 4rem; font-weight: 900; line-height: 1; color: white; text-shadow: 0 0 30px rgba(255,255,255,0.2); margin-bottom: 4px; letter-spacing: -1px; }
+        .tg-label { font-size: 0.9rem; font-weight: 600; color: var(--text-muted); letter-spacing: 4px; text-transform: uppercase; }
+        .tg-footer { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 16px; font-size: 0.8rem; color: var(--text-muted); font-weight: 500;}
         .tg-footer-left { display: flex; align-items: center; gap: 6px; }
-        .tg-footer-left svg { width: 12px; height: 12px; fill: var(--electric-blue); }
+        .tg-footer-left svg { width: 14px; height: 14px; fill: var(--electric-blue); }
 
         /* Creator UI */
-        .creator-section { margin-top: 30px; background: var(--bg-panel); border: 1px solid var(--glass-border); padding: 20px; border-radius: 16px; backdrop-filter: blur(10px); }
-        .creator-section h2 { font-size: 1.3rem; font-weight: 800; margin-bottom: 6px; }
-        .creator-section > p { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 20px; }
-        .form-group { margin-bottom: 16px; }
-        .form-group label { display: block; font-size: 0.85rem; font-weight: 600; color: var(--text-silver); margin-bottom: 6px; }
-        .form-control { width: 100%; background: rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.1); color: white; padding: 12px; border-radius: 10px; font-size: 0.95rem; outline: none; transition: var(--transition); }
-        .form-control:focus { border-color: var(--cyan-neon); box-shadow: 0 0 12px rgba(69, 223, 255, 0.2); }
-        textarea.form-control { resize: vertical; min-height: 70px; }
+        .creator-section { margin-top: 40px; background: var(--bg-panel); border: 1px solid var(--glass-border); padding: 24px; border-radius: 20px; backdrop-filter: blur(10px); }
+        .creator-section h2 { font-size: 1.5rem; font-weight: 800; margin-bottom: 8px; }
+        .creator-section > p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 24px; }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; font-size: 0.9rem; font-weight: 600; color: var(--text-silver); margin-bottom: 8px; }
+        .form-control { width: 100%; background: rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.1); color: white; padding: 14px; border-radius: 10px; font-size: 1rem; outline: none; transition: var(--transition); }
+        .form-control:focus { border-color: var(--cyan-neon); box-shadow: 0 0 15px rgba(69, 223, 255, 0.2); }
+        textarea.form-control { resize: vertical; min-height: 80px; }
         
-        .creator-task { background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.05); padding: 14px; border-radius: 12px; margin-bottom: 12px; position: relative; }
-        .remove-task { position: absolute; top: 10px; right: 10px; color: var(--primary-red); cursor: pointer; border: none; background: rgba(255,23,59,0.1); width: 24px; height: 24px; border-radius: 50%; font-size: 1.1rem; display:flex; align-items:center; justify-content:center;}
-        .btn-add { background: rgba(255,255,255,0.05); color: white; border: 1px dashed var(--text-muted); padding: 12px; width: 100%; border-radius: 10px; font-weight: 600; cursor: pointer; margin-bottom: 20px; transition: var(--transition);}
+        .creator-task { background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.05); padding: 16px; border-radius: 12px; margin-bottom: 12px; position: relative; }
+        .remove-task { position: absolute; top: 12px; right: 12px; color: var(--primary-red); cursor: pointer; border: none; background: rgba(255,23,59,0.1); width: 28px; height:28px; border-radius: 50%; font-size: 1.2rem; display:flex; align-items:center; justify-content:center;}
+        .btn-add { background: rgba(255,255,255,0.05); color: white; border: 1px dashed var(--text-muted); padding: 14px; width: 100%; border-radius: 12px; font-weight: 600; cursor: pointer; margin-bottom: 24px; transition: var(--transition);}
         .btn-add:hover { background: rgba(255,255,255,0.1); border-color: white;}
 
-        .feature-box { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 14px; margin-bottom: 16px; transition: var(--transition); }
+        .feature-box { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 16px; margin-bottom: 20px; transition: var(--transition); }
         .feature-box:hover { border-color: rgba(255,255,255,0.3); background: rgba(255,255,255,0.05); }
         .feature-box.share-theme { background: rgba(37,211,102,0.05); border-color: var(--wa-green); }
         .feature-box.pin-theme { background: rgba(163, 77, 255, 0.05); border-color: #A34DFF; }
 
-        .checkbox-label { display: flex; align-items: center; gap: 10px; cursor: pointer; font-weight: 700; font-size: 1rem; }
-        .checkbox-label input { width: 16px; height: 16px; cursor: pointer; }
+        .checkbox-label { display: flex; align-items: center; gap: 12px; cursor: pointer; font-weight: 700; font-size: 1.05rem; }
+        .checkbox-label input { width: 18px; height: 18px; cursor: pointer; }
         .share-theme .checkbox-label { color: var(--wa-green); }
         .share-theme input { accent-color: var(--wa-green); }
         .pin-theme .checkbox-label { color: #A34DFF; }
         .pin-theme input { accent-color: #A34DFF; }
         
-        .pin-input-group { display: flex; gap: 10px; margin-top: 12px; }
-        .pin-input-group input { width: 45px; height: 45px; text-align: center; font-size: 1.3rem; font-weight: 700; letter-spacing: 2px; border-radius: 8px; border: 1px solid rgba(163, 77, 255, 0.4); background: rgba(0,0,0,0.5); color: white; outline: none; }
+        .pin-input-group { display: flex; gap: 10px; margin-top: 16px; }
+        .pin-input-group input { width: 50px; height: 50px; text-align: center; font-size: 1.5rem; font-weight: 700; letter-spacing: 2px; border-radius: 8px; border: 1px solid rgba(163, 77, 255, 0.4); background: rgba(0,0,0,0.5); color: white; outline: none; }
         .pin-input-group input:focus { border-color: #A34DFF; box-shadow: 0 0 10px rgba(163, 77, 255, 0.3); }
         
-        .btn-generate { background: linear-gradient(90deg, var(--electric-blue), var(--cyan-neon)); color: #000; border: none; padding: 14px; width: 100%; border-radius: 10px; font-size: 1.05rem; font-weight: 800; cursor: pointer; box-shadow: 0 8px 25px rgba(22,140,255,0.3); transition: var(--transition); text-transform: uppercase; margin-top: 10px;}
-        .btn-generate:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(22,140,255,0.5); }
+        .btn-generate { background: linear-gradient(90deg, var(--electric-blue), var(--cyan-neon)); color: #000; border: none; padding: 16px; width: 100%; border-radius: 12px; font-size: 1.1rem; font-weight: 800; cursor: pointer; box-shadow: 0 10px 30px rgba(22,140,255,0.4); transition: var(--transition); text-transform: uppercase; margin-top: 10px;}
+        .btn-generate:hover { transform: translateY(-2px); box-shadow: 0 15px 40px rgba(22,140,255,0.6); }
 
-        /* MODAL POPUP FOR GENERATED LINK */
-        .modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.85); backdrop-filter: blur(8px); z-index: 999999; display: none; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s ease; }
-        .modal-overlay.show { display: flex; opacity: 1; }
-        .modal-content { background: var(--bg-panel); border: 1px solid var(--success-green); padding: 30px 20px; border-radius: 20px; width: 90%; max-width: 400px; text-align: center; position: relative; box-shadow: 0 10px 40px rgba(0,230,118,0.2); animation: popIn 0.4s; }
-        .modal-close { position: absolute; top: 12px; right: 15px; background: none; border: none; color: var(--text-muted); font-size: 1.5rem; cursor: pointer; transition: color 0.3s; }
-        .modal-close:hover { color: white; }
-        .modal-content h3 { color: var(--success-green); margin-bottom: 10px; font-size: 1.4rem; }
-        .modal-content p { color: var(--text-silver); font-size: 0.9rem; margin-bottom: 20px; }
-        .url-box { display: flex; background: rgba(0,0,0,0.6); border-radius: 10px; border: 1px solid rgba(255,255,255,0.2); padding: 10px; margin-bottom: 16px; align-items: center;}
-        .url-box input { flex-grow: 1; background: transparent; border: none; color: white; outline: none; font-family: monospace; font-size: 0.9rem; overflow: hidden; text-overflow: ellipsis;}
-        .btn-copy { background: rgba(0,230,118,0.1); border: 1px solid var(--success-green); border-radius: 6px; color: var(--success-green); padding: 6px 12px; cursor: pointer; font-weight: 700; transition: 0.3s;}
-        .btn-copy:hover { background: var(--success-green); color: #000; }
-        .modal-visit-btn { display: inline-block; color: var(--cyan-neon); font-weight: 700; text-decoration: none; border-bottom: 1px solid var(--cyan-neon); font-size: 0.95rem; margin-top: 10px; }
+        #generated-link-box { display: none; margin-top: 24px; background: rgba(0, 230, 118, 0.1); padding: 20px; border-radius: 12px; border: 1px solid var(--success-green); text-align: center; animation: popIn 0.4s ease;}
+        .url-box { display: flex; background: rgba(0,0,0,0.6); border-radius: 8px; border: 1px solid rgba(255,255,255,0.2); padding: 12px; margin: 16px 0; }
+        .url-box input { flex-grow: 1; background: transparent; border: none; color: white; outline: none; font-family: monospace; font-size: 0.95rem; }
+        .btn-copy { background: transparent; border: none; color: var(--success-green); padding: 0 10px; cursor: pointer; font-weight: 800;}
 
         /* --- UNLOCK VIEW (Sub + Share + PIN) --- */
         #unlock-view { display: none; }
-        .header-panel { text-align: center; padding: 10px 0 20px; }
-        .header-panel h1 { font-size: 1.8rem; font-weight: 800; margin-bottom: 6px; background: linear-gradient(to right, #fff, #94A3B8); -webkit-background-clip: text; -webkit-text-fill-color: transparent;}
-        .header-panel p { color: var(--text-muted); font-size: 0.9rem; line-height: 1.4; }
+        .header-panel { text-align: center; padding: 10px 0 24px; }
+        .header-panel h1 { font-size: 2rem; font-weight: 800; margin-bottom: 8px; background: linear-gradient(to right, #fff, #94A3B8); -webkit-background-clip: text; -webkit-text-fill-color: transparent;}
+        .header-panel p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.5; }
 
         /* PHASE 1: SUB TASKS */
         #sub-phase { display: block; animation: popIn 0.5s ease; }
-        .task-card { background: var(--bg-panel); border: 1px solid var(--glass-border); border-radius: 14px; padding: 12px 14px; display: flex; align-items: center; gap: 12px; position: relative; overflow: hidden; backdrop-filter: blur(10px); transition: var(--transition); box-shadow: 0 6px 20px rgba(0,0,0,0.3); margin-bottom: 12px; }
+        .task-card { background: var(--bg-panel); border: 1px solid var(--glass-border); border-radius: 16px; padding: 14px 16px; display: flex; align-items: center; gap: 14px; position: relative; overflow: hidden; backdrop-filter: blur(10px); transition: var(--transition); box-shadow: 0 8px 32px rgba(0,0,0,0.3); margin-bottom: 14px; }
         .task-card::before { content: ''; position: absolute; top: 0; left: -150%; width: 50%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.05), transparent); transform: skewX(-20deg); transition: 0.5s; }
         .task-card:hover::before { left: 150%; transition: 0.7s; }
-        .task-card.verified { background: linear-gradient(135deg, rgba(0, 230, 118, 0.1), rgba(0, 230, 118, 0.02)) !important; border-color: var(--success-green) !important; box-shadow: 0 0 20px var(--success-glow), inset 0 0 10px rgba(0, 230, 118, 0.1) !important; transform: scale(1.01); }
-        .platform-icon { width: 40px; height: 40px; border-radius: 10px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; background: rgba(255, 255, 255, 0.05); transition: var(--transition); }
-        .platform-icon svg { width: 22px; height: 22px; fill: #fff; }
-        .task-card.verified .platform-icon { background: var(--success-green); box-shadow: 0 0 12px var(--success-green); }
+        .task-card.verified { background: linear-gradient(135deg, rgba(0, 230, 118, 0.1), rgba(0, 230, 118, 0.02)) !important; border-color: var(--success-green) !important; box-shadow: 0 0 25px var(--success-glow), inset 0 0 15px rgba(0, 230, 118, 0.1) !important; transform: scale(1.02); }
+        .platform-icon { width: 44px; height: 44px; border-radius: 12px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; background: rgba(255, 255, 255, 0.05); transition: var(--transition); }
+        .platform-icon svg { width: 24px; height: 24px; fill: #fff; }
+        .task-card.verified .platform-icon { background: var(--success-green); box-shadow: 0 0 15px var(--success-green); }
         .task-info { flex-grow: 1; min-width: 0; }
-        .task-title { font-size: 0.95rem; font-weight: 700; color: var(--text-white); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-        .task-desc { font-size: 0.8rem; color: var(--text-muted); margin-top: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-        .task-card.verified .task-title { color: var(--success-green); text-shadow: 0 0 8px rgba(0, 230, 118, 0.4); }
+        .task-title { font-size: 1.05rem; font-weight: 700; color: var(--text-white); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .task-desc { font-size: 0.85rem; color: var(--text-muted); margin-top: 4px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .task-card.verified .task-title { color: var(--success-green); text-shadow: 0 0 10px rgba(0, 230, 118, 0.5); }
         .task-card.verified .task-desc { color: rgba(0, 230, 118, 0.8); }
-        .btn-action { padding: 8px 14px; border-radius: 8px; font-size: 0.85rem; font-weight: 800; border: none; cursor: pointer; color: white; display: flex; align-items: center; gap: 6px; flex-shrink: 0; transition: var(--transition); box-shadow: 0 4px 10px rgba(0,0,0,0.3); text-transform: uppercase; }
+        .btn-action { padding: 10px 18px; border-radius: 10px; font-size: 0.9rem; font-weight: 800; border: none; cursor: pointer; color: white; display: flex; align-items: center; gap: 8px; flex-shrink: 0; transition: var(--transition); box-shadow: 0 4px 15px rgba(0,0,0,0.3); text-transform: uppercase; }
         .btn-action:active { transform: scale(0.92); }
-        .btn-action svg { width: 14px; height: 14px; fill: currentColor; }
+        .btn-action svg { width: 16px; height: 16px; fill: currentColor; }
         .task-card.verified .btn-action { background: transparent !important; color: var(--success-green) !important; border: 1.5px solid var(--success-green); cursor: default; pointer-events: none; box-shadow: none; }
 
-        .bottom-bar { position: fixed; bottom: 0; left: 0; width: 100%; background: linear-gradient(to top, rgba(3,5,11,1) 40%, rgba(3,5,11,0.9) 100%); backdrop-filter: blur(20px); border-top: 1px solid var(--glass-border); padding: 12px 20px; padding-bottom: calc(12px + env(safe-area-inset-bottom)); display: none; flex-direction: column; align-items: center; z-index: 99; }
-        .progress-text { font-size: 0.85rem; font-weight: 700; color: var(--text-silver); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px;}
-        .btn-unlock { width: 100%; max-width: 400px; background: rgba(255, 255, 255, 0.05); color: var(--text-muted); border: 1px solid var(--glass-border); padding: 12px; border-radius: 12px; font-size: 1rem; font-weight: 800; text-transform: uppercase; display: flex; justify-content: center; align-items: center; gap: 8px; cursor: not-allowed; transition: var(--transition); }
-        .btn-unlock.ready { background: linear-gradient(90deg, #168CFF, #45DFFF, #168CFF); background-size: 200% auto; color: #000; border: none; cursor: pointer; box-shadow: 0 0 25px rgba(69, 223, 255, 0.5); animation: gradient-shift 3s linear infinite; }
+        .bottom-bar { position: fixed; bottom: 0; left: 0; width: 100%; background: linear-gradient(to top, rgba(3,5,11,1) 40%, rgba(3,5,11,0.8) 100%); backdrop-filter: blur(20px); border-top: 1px solid var(--glass-border); padding: 16px 20px; padding-bottom: calc(16px + env(safe-area-inset-bottom)); display: none; flex-direction: column; align-items: center; z-index: 99; }
+        .progress-text { font-size: 0.95rem; font-weight: 700; color: var(--text-silver); margin-bottom: 12px; text-transform: uppercase; letter-spacing: 1px;}
+        .btn-unlock { width: 100%; max-width: 400px; background: rgba(255, 255, 255, 0.05); color: var(--text-muted); border: 1px solid var(--glass-border); padding: 16px; border-radius: 14px; font-size: 1.1rem; font-weight: 800; text-transform: uppercase; display: flex; justify-content: center; align-items: center; gap: 10px; cursor: not-allowed; transition: var(--transition); }
+        .btn-unlock.ready { background: linear-gradient(90deg, #168CFF, #45DFFF, #168CFF); background-size: 200% auto; color: #000; border: none; cursor: pointer; box-shadow: 0 0 30px rgba(69, 223, 255, 0.6); animation: gradient-shift 3s linear infinite; }
 
         /* PHASE 2: SHARE TASKS */
         #share-phase { display: none; text-align: center; animation: popIn 0.5s ease; }
-        .progress-container { position: relative; width: 180px; height: 180px; margin: 15px auto 25px; display: flex; align-items: center; justify-content: center; }
+        .progress-container { position: relative; width: 220px; height: 220px; margin: 20px auto 30px; display: flex; align-items: center; justify-content: center; }
         .progress-ring { transform: rotate(-90deg); width: 100%; height: 100%; position: absolute; top: 0; left: 0; }
-        .progress-ring circle { fill: transparent; stroke-width: 10; stroke-linecap: round; }
+        .progress-ring circle { fill: transparent; stroke-width: 12; stroke-linecap: round; }
         .ring-bg { stroke: rgba(255, 255, 255, 0.05); }
-        .ring-fill { stroke: var(--wa-green); stroke-dasharray: 565; stroke-dashoffset: 565; transition: stroke-dashoffset 1s cubic-bezier(0.4, 0, 0.2, 1); filter: drop-shadow(0 0 10px var(--wa-green)); }
+        .ring-fill { stroke: var(--wa-green); stroke-dasharray: 630; stroke-dashoffset: 630; transition: stroke-dashoffset 1s cubic-bezier(0.4, 0, 0.2, 1); filter: drop-shadow(0 0 10px var(--wa-green)); }
         .progress-content { display: flex; flex-direction: column; align-items: center; justify-content: center; z-index: 2; }
-        .percent-text { font-size: 2.8rem; font-weight: 900; color: white; line-height: 1; text-shadow: 0 0 15px rgba(255,255,255,0.3); }
-        .percent-label { font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; margin-top: 5px; }
+        .percent-text { font-size: 3.5rem; font-weight: 900; color: white; line-height: 1; text-shadow: 0 0 20px rgba(255,255,255,0.3); }
+        .percent-label { font-size: 0.9rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 2px; margin-top: 5px; }
 
-        .status-box { background: var(--bg-panel); border: 1px solid var(--glass-border); border-radius: 14px; padding: 18px; box-shadow: 0 8px 25px rgba(0,0,0,0.5); }
-        .share-count-text { font-size: 1rem; font-weight: 700; color: var(--wa-green); background: rgba(37,211,102,0.1); padding: 6px 14px; border-radius: 20px; display: inline-block; margin-bottom: 12px;}
+        .status-box { background: var(--bg-panel); border: 1px solid var(--glass-border); border-radius: 16px; padding: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        .share-count-text { font-size: 1.1rem; font-weight: 700; color: var(--wa-green); background: rgba(37,211,102,0.1); padding: 8px 16px; border-radius: 20px; display: inline-block;}
+        .btn-whatsapp { display: flex; align-items: center; justify-content: center; gap: 12px; background: var(--wa-green); color: #000; padding: 18px 24px; border-radius: 50px; font-size: 1.2rem; font-weight: 800; text-transform: uppercase; box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4); border: none; cursor: pointer; width: 100%; transition: var(--transition); margin-top: 20px;}
         
-        /* Fixed sleek WhatsApp button */
-        .btn-whatsapp { display: flex; align-items: center; justify-content: center; gap: 10px; background: var(--wa-green); color: #000; padding: 14px 24px; border-radius: 50px; font-size: 1.05rem; font-weight: 800; text-transform: uppercase; box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3); border: none; cursor: pointer; width: 100%; transition: var(--transition); }
-        .btn-whatsapp svg { width: 20px; height: 20px; fill: #000; }
-        .btn-whatsapp:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(37, 211, 102, 0.5); }
-
-        /* Analyzing Overlay - Fixed Sync */
-        #analyze-overlay { position: fixed; inset: 0; background: rgba(3,5,11,0.9); z-index: 999; display: none; flex-direction: column; align-items: center; justify-content: center; backdrop-filter: blur(8px); }
-        .scanner { width: 80px; height: 80px; position: relative; margin-bottom: 20px; }
-        .scanner::before { content: ''; position: absolute; inset: 0; border: 3px solid rgba(37,211,102,0.2); border-radius: 50%; }
-        /* Syncing both animations using the exact same keyframe and duration */
-        .scanner::after { content: ''; position: absolute; inset: 0; border: 3px solid transparent; border-top-color: var(--wa-green); border-radius: 50%; animation: scan-spin 1.5s linear infinite; filter: drop-shadow(0 0 10px var(--wa-green)); }
-        .radar-line { position: absolute; top: 50%; left: 50%; width: 40px; height: 2px; background: var(--wa-green); transform-origin: 0 50%; animation: scan-spin 1.5s linear infinite; }
-        
-        .analyze-text { color: var(--wa-green); font-size: 1.1rem; font-weight: 700; letter-spacing: 2px; animation: pulse-opacity 1s infinite; text-transform: uppercase;}
+        #analyze-overlay { position: fixed; inset: 0; background: rgba(3,5,11,0.9); z-index: 999; display: none; flex-direction: column; align-items: center; justify-content: center; backdrop-filter: blur(10px); }
+        .scanner { width: 100px; height: 100px; position: relative; margin-bottom: 20px; }
+        .scanner::before { content: ''; position: absolute; inset: 0; border: 4px solid rgba(37,211,102,0.2); border-radius: 50%; }
+        .scanner::after { content: ''; position: absolute; inset: 0; border: 4px solid transparent; border-top-color: var(--wa-green); border-radius: 50%; animation: spin 1s linear infinite; filter: drop-shadow(0 0 10px var(--wa-green)); }
+        .radar-line { position: absolute; top: 50%; left: 50%; width: 50px; height: 2px; background: var(--wa-green); transform-origin: 0 50%; animation: scan-radar 2s linear infinite; }
+        .analyze-text { color: var(--wa-green); font-size: 1.2rem; font-weight: 700; letter-spacing: 2px; animation: pulse-opacity 1s infinite; text-transform: uppercase;}
 
         /* PHASE 3: PIN SECURITY */
-        #pin-phase { display: none; text-align: center; animation: popIn 0.5s ease; padding-top: 10px;}
-        .lock-icon-lg { width: 60px; height: 60px; background: rgba(163, 77, 255, 0.1); border: 2px solid #A34DFF; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; box-shadow: 0 0 20px rgba(163, 77, 255, 0.3); }
-        .lock-icon-lg svg { width: 26px; height: 26px; fill: #A34DFF; }
-        #pin-phase h2 { font-size: 1.6rem; font-weight: 800; margin-bottom: 8px; color: white; }
-        #pin-phase p { color: var(--text-silver); font-size: 0.9rem; margin-bottom: 25px; }
+        #pin-phase { display: none; text-align: center; animation: popIn 0.5s ease; padding-top: 20px;}
+        .lock-icon-lg { width: 70px; height: 70px; background: rgba(163, 77, 255, 0.1); border: 2px solid #A34DFF; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; box-shadow: 0 0 20px rgba(163, 77, 255, 0.3); }
+        .lock-icon-lg svg { width: 30px; height: 30px; fill: #A34DFF; }
+        #pin-phase h2 { font-size: 1.8rem; font-weight: 800; margin-bottom: 10px; color: white; }
+        #pin-phase p { color: var(--text-silver); font-size: 1rem; margin-bottom: 30px; }
         
-        .verify-pin-inputs { display: flex; gap: 12px; justify-content: center; margin-bottom: 25px; }
-        .v-pin { width: 55px; height: 65px; font-size: 2rem; text-align: center; background: rgba(0,0,0,0.6); border: 2px solid var(--glass-border); border-radius: 10px; color: white; outline: none; transition: var(--transition); box-shadow: inset 0 2px 8px rgba(0,0,0,0.5);}
-        .v-pin:focus { border-color: #A34DFF; box-shadow: 0 0 15px rgba(163, 77, 255, 0.5), inset 0 2px 8px rgba(0,0,0,0.5); }
+        .verify-pin-inputs { display: flex; gap: 15px; justify-content: center; margin-bottom: 30px; }
+        .v-pin { width: 60px; height: 70px; font-size: 2.5rem; text-align: center; background: rgba(0,0,0,0.6); border: 2px solid var(--glass-border); border-radius: 12px; color: white; outline: none; transition: var(--transition); box-shadow: inset 0 2px 10px rgba(0,0,0,0.5);}
+        .v-pin:focus { border-color: #A34DFF; box-shadow: 0 0 15px rgba(163, 77, 255, 0.5), inset 0 2px 10px rgba(0,0,0,0.5); }
         .v-pin.error { border-color: var(--primary-red); box-shadow: 0 0 15px rgba(255, 23, 59, 0.4); animation: shake 0.4s; color: var(--primary-red);}
         .v-pin.success { border-color: var(--success-green); box-shadow: 0 0 15px rgba(0, 230, 118, 0.4); color: var(--success-green); }
 
-        .btn-verify-pin { background: linear-gradient(135deg, #A34DFF, #7D26CD); color: #fff; padding: 14px 30px; border-radius: 50px; font-size: 1.1rem; font-weight: 800; border: none; cursor: pointer; box-shadow: 0 8px 25px rgba(163, 77, 255, 0.4); text-transform: uppercase; width: 100%; transition: var(--transition); letter-spacing: 1px;}
-        .btn-verify-pin:hover { transform: translateY(-2px); box-shadow: 0 12px 35px rgba(163, 77, 255, 0.6); }
+        .btn-verify-pin { background: linear-gradient(135deg, #A34DFF, #7D26CD); color: #fff; padding: 18px 40px; border-radius: 50px; font-size: 1.2rem; font-weight: 800; border: none; cursor: pointer; box-shadow: 0 10px 30px rgba(163, 77, 255, 0.4); text-transform: uppercase; width: 100%; transition: var(--transition); letter-spacing: 1px;}
+        .btn-verify-pin:hover { transform: translateY(-3px); box-shadow: 0 15px 40px rgba(163, 77, 255, 0.6); }
+        .btn-verify-pin:active { transform: scale(0.95); }
 
         /* PHASE 4: FINAL DESTINATION */
-        #dest-phase { display: none; background: radial-gradient(circle at top, rgba(0, 230, 118, 0.1), transparent 70%); border: 1px solid var(--success-green); border-radius: 16px; padding: 30px 20px; text-align: center; margin-top: 15px; box-shadow: 0 0 40px rgba(0, 230, 118, 0.1); animation: popIn 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
-        .success-icon { width: 70px; height: 70px; background: var(--success-green); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; box-shadow: 0 0 25px var(--success-glow); animation: scaleUp 0.5s ease-out 0.2s both; }
-        .success-icon svg { width: 34px; height: 34px; fill: #000; }
-        #dest-phase h2 { color: var(--success-green); font-size: 1.6rem; font-weight: 900; margin-bottom: 8px; }
-        #dest-phase p { color: var(--text-silver); font-size: 0.95rem; margin-bottom: 25px; }
-        
-        /* Sleek Open Button */
-        .btn-glow-open { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: linear-gradient(135deg, var(--success-green), #00C853); color: #000; padding: 14px 30px; border-radius: 50px; font-size: 1.1rem; font-weight: 900; text-decoration: none; box-shadow: 0 8px 25px rgba(0, 230, 118, 0.3); transition: var(--transition); text-transform: uppercase; letter-spacing: 1px; width: 100%; }
-        .btn-glow-open:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(0, 230, 118, 0.5); }
+        #dest-phase { display: none; background: radial-gradient(circle at top, rgba(0, 230, 118, 0.15), transparent 70%); border: 1px solid var(--success-green); border-radius: 20px; padding: 40px 24px; text-align: center; margin-top: 20px; box-shadow: 0 0 50px rgba(0, 230, 118, 0.15); animation: popIn 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+        .success-icon { width: 80px; height: 80px; background: var(--success-green); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; box-shadow: 0 0 30px var(--success-glow); animation: scaleUp 0.5s ease-out 0.2s both; }
+        .success-icon svg { width: 40px; height: 40px; fill: #000; }
+        #dest-phase h2 { color: var(--success-green); font-size: 1.8rem; font-weight: 900; margin-bottom: 10px; }
+        #dest-phase p { color: var(--text-silver); font-size: 1rem; margin-bottom: 30px; }
+        .btn-glow-open { display: inline-flex; align-items: center; justify-content: center; gap: 10px; background: linear-gradient(135deg, var(--success-green), #00C853); color: #000; padding: 18px 40px; border-radius: 50px; font-size: 1.2rem; font-weight: 900; text-decoration: none; box-shadow: 0 10px 30px rgba(0, 230, 118, 0.4); transition: var(--transition); text-transform: uppercase; letter-spacing: 1px; width: 100%; }
+        .btn-glow-open:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 15px 40px rgba(0, 230, 118, 0.6); }
 
         /* FOOTER */
-        footer { margin-top: auto; padding: 20px; text-align: center; border-top: 1px solid rgba(255,255,255,0.05); background: rgba(0,0,0,0.5); z-index: 10; position: relative; }
-        footer p { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 4px; }
-        footer .credits { font-size: 0.85rem; font-weight: 600; color: var(--text-silver); }
+        footer { margin-top: auto; padding: 24px; text-align: center; border-top: 1px solid rgba(255,255,255,0.05); background: rgba(0,0,0,0.5); z-index: 10; position: relative; }
+        footer p { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 6px; }
+        footer .credits { font-size: 0.9rem; font-weight: 600; color: var(--text-silver); }
         footer .credits span { color: var(--cyan-neon); font-weight: 800; }
 
         /* Animations */
-        @keyframes pulse-red { 0% { box-shadow: 0 0 0 0 rgba(0, 230, 118, 0.7); } 70% { box-shadow: 0 0 0 6px rgba(0, 230, 118, 0); } 100% { box-shadow: 0 0 0 0 rgba(0, 230, 118, 0); } }
+        @keyframes pulse-red { 0% { box-shadow: 0 0 0 0 rgba(0, 230, 118, 0.7); } 70% { box-shadow: 0 0 0 8px rgba(0, 230, 118, 0); } 100% { box-shadow: 0 0 0 0 rgba(0, 230, 118, 0); } }
         @keyframes gradient-shift { 0% { background-position: 0% center; } 100% { background-position: 200% center; } }
-        @keyframes popIn { 0% { opacity: 0; transform: scale(0.9) translateY(15px); } 100% { opacity: 1; transform: scale(1) translateY(0); } }
-        @keyframes scaleUp { 0% { transform: scale(0); } 70% { transform: scale(1.1); } 100% { transform: scale(1); } }
-        @keyframes scan-spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        @keyframes popIn { 0% { opacity: 0; transform: scale(0.8) translateY(20px); } 100% { opacity: 1; transform: scale(1) translateY(0); } }
+        @keyframes scaleUp { 0% { transform: scale(0); } 70% { transform: scale(1.2); } 100% { transform: scale(1); } }
+        @keyframes scan-radar { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
         @keyframes pulse-opacity { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
-        @keyframes shake { 0%, 100% { transform: translateX(0); } 25% { transform: translateX(-6px); } 75% { transform: translateX(6px); } }
-        .spinner { animation: scan-spin 1s linear infinite; }
+        @keyframes shake { 0%, 100% { transform: translateX(0); } 25% { transform: translateX(-8px); } 75% { transform: translateX(8px); } }
+        .spinner { animation: spin 1s linear infinite; }
         
         #confetti-canvas { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: 9999; display: none; }
     </style>
@@ -248,23 +232,6 @@
     <div id="analyze-overlay">
         <div class="scanner"><div class="radar-line"></div></div>
         <div class="analyze-text" id="analyze-msg">Analyzing Share Data...</div>
-    </div>
-
-    <!-- Generated Link Modal -->
-    <div class="modal-overlay" id="link-modal">
-        <div class="modal-content">
-            <button class="modal-close" onclick="app.closeModal()">×</button>
-            <div class="lock-icon-lg" style="width: 50px; height: 50px; margin: 0 auto 10px; border-color: var(--success-green); background: rgba(0,230,118,0.1); box-shadow: none;">
-                <svg viewBox="0 0 24 24" style="fill: var(--success-green); width: 24px; height: 24px;"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
-            </div>
-            <h3>Link Generated!</h3>
-            <p>Your magic link is ready to be shared.</p>
-            <div class="url-box">
-                <input type="text" id="g-url" readonly>
-                <button class="btn-copy" onclick="app.copyText('g-url')">COPY</button>
-            </div>
-            <a href="#" id="g-visit" class="modal-visit-btn">Open Link to Test</a>
-        </div>
     </div>
 
     <!-- Navigation -->
@@ -318,11 +285,11 @@
                 <input type="url" id="c-dest" class="form-control" placeholder="https://drive.google..." value="https://example.com/download">
             </div>
 
-            <h3 style="margin: 24px 0 12px; font-size: 1.05rem; border-bottom: 1px solid var(--glass-border); padding-bottom: 6px;">1. Subscription Tasks</h3>
+            <h3 style="margin: 24px 0 16px; font-size: 1.1rem; border-bottom: 1px solid var(--glass-border); padding-bottom: 8px;">1. Subscription Tasks</h3>
             <div id="c-tasks-list"></div>
             <button class="btn-add" onclick="creator.addTaskUI()">+ Add Sub Task</button>
 
-            <h3 style="margin: 28px 0 12px; font-size: 1.05rem; border-bottom: 1px solid var(--glass-border); padding-bottom: 6px;">2. Viral & Security Features</h3>
+            <h3 style="margin: 32px 0 16px; font-size: 1.1rem; border-bottom: 1px solid var(--glass-border); padding-bottom: 8px;">2. Viral & Security Features</h3>
             
             <!-- Viral Share Section -->
             <div class="feature-box share-theme">
@@ -330,8 +297,8 @@
                     <input type="checkbox" id="c-has-share" onchange="document.getElementById('share-settings-box').style.display = this.checked ? 'block' : 'none'">
                     Enable WhatsApp Share Feature
                 </label>
-                <div id="share-settings-box" style="display:none; margin-top: 14px;">
-                    <label style="display:block; font-size: 0.85rem; color: var(--text-silver); margin-bottom: 6px;">Viral Message for WhatsApp</label>
+                <div id="share-settings-box" style="display:none; margin-top: 16px;">
+                    <label style="display:block; font-size: 0.9rem; color: var(--text-silver); margin-bottom: 8px;">Viral Message for WhatsApp</label>
                     <textarea id="c-msg" class="form-control" placeholder="Type the viral message here...">Guys, check out this amazing website! It's 100% working.</textarea>
                 </div>
             </div>
@@ -342,8 +309,8 @@
                     <input type="checkbox" id="c-has-pin" onchange="document.getElementById('pin-settings-box').style.display = this.checked ? 'block' : 'none'">
                     Enable 4-Digit PIN Security
                 </label>
-                <div id="pin-settings-box" style="display:none; margin-top: 14px;">
-                    <label style="display:block; font-size: 0.85rem; color: var(--text-silver);">Set a Secret PIN</label>
+                <div id="pin-settings-box" style="display:none; margin-top: 16px;">
+                    <label style="display:block; font-size: 0.9rem; color: var(--text-silver);">Set a Secret PIN</label>
                     <div class="pin-input-group" id="c-pin-group">
                         <input type="password" maxlength="1" class="c-pin-box" placeholder="•">
                         <input type="password" maxlength="1" class="c-pin-box" placeholder="•">
@@ -354,6 +321,15 @@
             </div>
 
             <button class="btn-generate" onclick="creator.generateLink()">Generate Magic Link</button>
+
+            <div id="generated-link-box">
+                <h3 style="color: var(--success-green); margin-bottom: 8px;">Link Ready!</h3>
+                <div class="url-box">
+                    <input type="text" id="g-url" readonly>
+                    <button class="btn-copy" onclick="app.copyText('g-url')">COPY</button>
+                </div>
+                <a href="#" id="g-visit" style="color: var(--cyan-neon); font-weight: 700; text-decoration: none; display: inline-block; margin-top: 10px; border-bottom: 1px solid var(--cyan-neon);">Test Your Link</a>
+            </div>
         </div>
     </main>
 
@@ -369,15 +345,15 @@
             <div id="tasks-container"></div>
         </div>
 
-        <!-- PHASE 2: SHARE -->
+        <!-- PHASE 2: SHARE (Hidden by default) -->
         <div id="share-phase">
-            <h2 style="font-size: 1.3rem; color: var(--text-white); margin-bottom: 6px;">Share to Unlock</h2>
-            <p style="color: var(--text-silver); font-size: 0.9rem;">Share this link 10 times with your WhatsApp friends or groups to unlock.</p>
+            <h2 style="font-size: 1.4rem; color: var(--text-white); margin-bottom: 10px;">Viral Step</h2>
+            <p style="color: var(--text-silver); font-size: 0.95rem;">Share this link 10 times with your WhatsApp friends or groups to unlock.</p>
             
             <div class="progress-container" id="main-progress-ui">
-                <svg class="progress-ring" viewBox="0 0 180 180">
-                    <circle class="ring-bg" cx="90" cy="90" r="90"></circle>
-                    <circle class="ring-fill" id="ring-fill" cx="90" cy="90" r="90"></circle>
+                <svg class="progress-ring" viewBox="0 0 220 220">
+                    <circle class="ring-bg" cx="110" cy="110" r="100"></circle>
+                    <circle class="ring-fill" id="ring-fill" cx="110" cy="110" r="100"></circle>
                 </svg>
                 <div class="progress-content">
                     <div class="percent-text" id="percent-text">0%</div>
@@ -386,8 +362,8 @@
             </div>
 
             <div class="status-box" id="action-box">
-                <h2 style="color: var(--text-white); font-size: 1.1rem;">WhatsApp Share</h2>
-                <div class="share-count-text" id="share-count-text">Shares: 0 / 10</div>
+                <h2 style="color: var(--text-white);">WhatsApp Share</h2>
+                <div class="share-count-text" id="share-count-text" style="margin: 10px 0;">Shares: 0 / 10</div>
                 <button class="btn-whatsapp" onclick="app.shareWhatsApp()">
                     <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
                     Share on WhatsApp
@@ -395,7 +371,7 @@
             </div>
         </div>
 
-        <!-- PHASE 3: PIN SECURITY -->
+        <!-- PHASE 3: PIN SECURITY (Hidden by default) -->
         <div id="pin-phase">
             <div class="lock-icon-lg"><svg viewBox="0 0 24 24"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zM9 8V6c0-1.66 1.34-3 3-3s3 1.34 3 3v2H9z"/></svg></div>
             <h2>Security Check</h2>
@@ -416,8 +392,7 @@
             <div class="success-icon"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg></div>
             <h2>Successfully Unlocked!</h2>
             <p>Thank you for completing all steps. Your destination is ready.</p>
-            <!-- Sleek Open Link Button -->
-            <a href="#" id="btn-continue" class="btn-glow-open" target="_blank">Open Link</a>
+            <a href="#" id="btn-continue" class="btn-glow-open" target="_blank">Open Destination</a>
         </div>
     </main>
 
@@ -425,7 +400,7 @@
     <div class="bottom-bar" id="bottom-bar">
         <div class="progress-text" id="progress-text">0/0 VERIFIED</div>
         <button class="btn-unlock" id="btn-unlock" disabled>
-            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zM9 8V6c0-1.66 1.34-3 3-3s3 1.34 3 3v2H9z"/></svg>
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zM9 8V6c0-1.66 1.34-3 3-3s3 1.34 3 3v2H9z"/></svg>
             LOCKED
         </button>
     </div>
@@ -440,7 +415,7 @@
         const ICONS = {
             youtube: '<svg viewBox="0 0 24 24"><path d="M21.58 7.19c-.23-.86-.91-1.54-1.77-1.77C18.25 5 12 5 12 5s-6.25 0-7.81.42c-.86.23-1.54.91-1.77 1.77C2 8.75 2 12 2 12s0 3.25.42 4.81c.23.86.91 1.54 1.77 1.77C5.75 19 12 19 12 19s6.25 0 7.81-.42c.86-.23 1.54-.91 1.77-1.77C22 15.25 22 12 22 12s0-3.25-.42-4.81zM10 15V9l5.2 3-5.2 3z"/></svg>',
             telegram: '<svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.19-.08-.05-.19-.02-.27 0-.12.03-1.99 1.26-5.61 3.71-.53.36-1.01.54-1.44.53-.47-.01-1.38-.27-2.06-.49-.83-.27-1.49-.41-1.43-.87.03-.24.38-.48 1.04-.74 4.08-1.78 6.8-2.95 8.16-3.52 3.88-1.63 4.69-1.91 5.22-1.92.12 0 .38.03.53.15.13.1.17.24.18.35.01.07.02.16.02.26z"/></svg>',
-            instagram: '<svg viewBox="0 0 24 24"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2zm-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.4 5.6 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.6 18.4 4 16.4 4H7.6zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25zM12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/></svg>',
+            instagram: '<svg viewBox="0 0 24 24"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2zm-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.4 5.6 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.6 18.4 4 16.4 4H7.6zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25zM12 7a5 5 0 0 1 5 5 5 5 0 0 1-5-5 5 5 0 0 1-5-5 5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/></svg>',
             link: '<svg viewBox="0 0 24 24"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>',
             check: '<svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>',
             spinner: '<svg class="spinner" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="3" stroke-dasharray="31.4 31.4" stroke-linecap="round"></circle></svg>'
@@ -479,14 +454,16 @@
         const app = {
             config: null,
             state: { tasks: {}, activeSubId: null, subVerifiedCount: 0, subTotalCount: 0, shareCount: 0, isSharing: false },
-            circleCircumference: 2 * Math.PI * 90, // Updated radius to 90
+            circleCircumference: 2 * Math.PI * 100,
 
             init() {
                 fx.init();
                 setTimeout(() => { document.getElementById('app-loader').classList.add('hidden'); }, 1500);
+
                 const params = new URLSearchParams(window.location.search);
                 const id = params.get('id');
 
+                // Setup Pin Inputs Logic (For both Creator and Unlocker)
                 this.setupPinInputs('c-pin-box');
                 this.setupPinInputs('v-pin');
 
@@ -498,11 +475,15 @@
                 const inputs = document.querySelectorAll('.' + className);
                 inputs.forEach((input, index) => {
                     input.addEventListener('input', (e) => {
-                        input.classList.remove('error'); 
-                        if (e.target.value.length === 1 && index < inputs.length - 1) inputs[index + 1].focus();
+                        input.classList.remove('error'); // remove error on typing
+                        if (e.target.value.length === 1 && index < inputs.length - 1) {
+                            inputs[index + 1].focus();
+                        }
                     });
                     input.addEventListener('keydown', (e) => {
-                        if (e.key === 'Backspace' && !e.target.value && index > 0) inputs[index - 1].focus();
+                        if (e.key === 'Backspace' && !e.target.value && index > 0) {
+                            inputs[index - 1].focus();
+                        }
                     });
                 });
             },
@@ -539,15 +520,18 @@
                     document.getElementById('page-title').textContent = this.config.title;
                     document.title = this.config.title + " | HRRY";
 
+                    // Start Logic Flow
                     if (this.state.subTotalCount > 0) {
                         document.getElementById('bottom-bar').style.display = 'flex';
                         this.config.tasks.forEach(t => this.state.tasks[t.id] = { status: 'pending' });
                         this.renderSubTasks();
                         this.updateBottomBar();
                     } else {
+                        // Skip Sub phase if empty
                         document.getElementById('sub-phase').style.display = 'none';
                         this.handleSubComplete(); 
                     }
+                    
                     this.setupFocusListener();
                 } else {
                     document.getElementById('page-title').textContent = "Link Invalid or Expired";
@@ -611,9 +595,11 @@
                 if (this.state.subVerifiedCount >= this.state.subTotalCount && this.state.subTotalCount > 0) {
                     btn.classList.add('ready'); btn.disabled = false;
                     
-                    if(this.config.hasShare || this.config.hasPin) btn.innerHTML = 'CONTINUE ' + ICONS.check;
-                    else btn.innerHTML = 'UNLOCK NOW ' + ICONS.check;
-                    
+                    if(this.config.hasShare || this.config.hasPin) {
+                        btn.innerHTML = 'CONTINUE ' + ICONS.check;
+                    } else {
+                        btn.innerHTML = 'UNLOCK NOW ' + ICONS.check;
+                    }
                     btn.onclick = () => this.handleSubComplete();
                 }
             },
@@ -623,9 +609,13 @@
                 document.getElementById('bottom-bar').style.display = 'none';
                 document.getElementById('main-header').style.display = 'none';
 
-                if(this.config.hasShare) this.startSharePhase();
-                else if (this.config.hasPin) this.startPinPhase();
-                else this.showFinalDest();
+                if(this.config.hasShare) {
+                    this.startSharePhase();
+                } else if (this.config.hasPin) {
+                    this.startPinPhase();
+                } else {
+                    this.showFinalDest();
+                }
             },
 
             // --- PHASE 2: SHARE LOGIC ---
@@ -687,6 +677,7 @@
             // --- PHASE 3: PIN LOGIC ---
             startPinPhase() {
                 document.getElementById('pin-phase').style.display = 'block';
+                // auto focus first input
                 setTimeout(() => document.querySelectorAll('.v-pin')[0].focus(), 500);
             },
 
@@ -702,7 +693,10 @@
                         this.showFinalDest();
                     }, 600);
                 } else {
-                    inputs.forEach(input => { input.classList.add('error'); input.value = ''; });
+                    inputs.forEach(input => {
+                        input.classList.add('error');
+                        input.value = ''; // clear on wrong
+                    });
                     inputs[0].focus();
                 }
             },
@@ -731,12 +725,8 @@
 
             copyText(elementId) {
                 const input = document.getElementById(elementId);
-                input.select(); document.execCommand('copy');
-            },
-            
-            // Modal Logics
-            openModal() { document.getElementById('link-modal').classList.add('show'); },
-            closeModal() { document.getElementById('link-modal').classList.remove('show'); }
+                input.select(); document.execCommand('copy'); alert('Link Copied Successfully!');
+            }
         };
 
         // --- CREATOR LOGIC ---
@@ -772,8 +762,10 @@
             generateLink() {
                 const title = document.getElementById('c-title').value.trim();
                 const destUrl = document.getElementById('c-dest').value.trim();
+                
                 const hasShare = document.getElementById('c-has-share').checked;
                 const shareMsg = document.getElementById('c-msg').value.trim();
+                
                 const hasPin = document.getElementById('c-has-pin').checked;
                 let pinCode = "";
                 document.querySelectorAll('.c-pin-box').forEach(i => pinCode += i.value);
@@ -806,11 +798,9 @@
                 localStorage.setItem('hrry_ult_' + id, JSON.stringify(configData));
 
                 const finalLink = `${window.location.href.split('?')[0]}?id=${id}`;
-                
-                // Show URL in Modal instead of normal box
+                document.getElementById('generated-link-box').style.display = 'block';
                 document.getElementById('g-url').value = finalLink;
-                document.getElementById('g-visit').href = finalLink;
-                app.openModal();
+                window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
             }
         };
 
